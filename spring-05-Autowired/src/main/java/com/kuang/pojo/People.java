@@ -1,6 +1,7 @@
 package com.kuang.pojo;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 
 /**
  * @program: com.kuang
@@ -10,8 +11,10 @@ import org.springframework.beans.factory.annotation.Autowired;
  **/
 public class People {
     @Autowired
+    @Qualifier(value = "cat1")
     private Cat cat;
     @Autowired
+    @Qualifier(value = "dog2")
     private Dog dog;
     private String name;
 

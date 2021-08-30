@@ -7,12 +7,8 @@
         http://www.springframework.org/schema/context
         https://www.springframework.org/schema/context/spring-context.xsd">
 
-    <bean id = "cat1" class="com.kuang.pojo.Cat"/>
-    <bean id = "cat2" class="com.kuang.pojo.Cat"/>
-    <bean id = "dog1" class="com.kuang.pojo.Dog"/>
-    <bean id = "dog2" class="com.kuang.pojo.Dog"/>
-    <bean id = "people" class="com.kuang.pojo.People"/>
-
+    <!--指定要扫描的包，包下的注解就会生效-->
+    <context:component-scan base-package="com.kuang.pojo"/>
     <!--开启注解的支持！-->
     <context:annotation-config/>
 
